@@ -1,6 +1,6 @@
 <template>
   <h2 id="versions">
-    Lib versions poo poo
+    Lib versions poo poo pee pee
   </h2>
   <div>
     <ul aria-labelledby="versions">

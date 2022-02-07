@@ -135,6 +135,7 @@ app.whenReady()
 // Auto-updates
 if (import.meta.env.PROD) {
   app.whenReady()
+    .then(console.log('checking for update'))
     .then(() => import('electron-updater'))
     .then(({autoUpdater}) => autoUpdater.checkForUpdatesAndNotify())
     .catch((e) => console.error('Failed check updates:', e));

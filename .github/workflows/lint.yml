@@ -9,6 +9,9 @@ on:
       - '**.vue'
       - 'package-lock.json'
       - '.github/workflows/lint.yml'
+  paths-ignore:
+      - '!packages/renderer/auto-imports.d.ts'
+      - '!packages/renderer/components.d.ts'
   pull_request:
     paths:
       - '**.js'

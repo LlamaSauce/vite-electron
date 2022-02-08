@@ -10,6 +10,8 @@ on:
       - '.gitignore'
       - '.github/**'
       - '!.github/workflows/release.yml'
+      - '!packages/renderer/auto-imports.d.ts'
+      - '!packages/renderer/components.d.ts'
 
 concurrency:
   group: release-${{ github.ref }}

@@ -1,16 +1,13 @@
 <template>
   <div class="container">
     <div class="title">{{ userName }}</div>
-    <div class="icon">
-      <q-icon name="fas fa-chevron-down" />
-    </div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    serverName: String,
+    userName: String,
   },
 };
 </script>

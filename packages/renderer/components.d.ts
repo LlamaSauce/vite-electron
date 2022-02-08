@@ -14,4 +14,3 @@ declare module 'vue' {
 }
 
 export { }
-/* eslint-disable no-alert, no-console */

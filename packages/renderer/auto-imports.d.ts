@@ -53,4 +53,3 @@ declare global {
   const watchEffect: typeof import('vue')['watchEffect']
 }
 export { }
-/* eslint-disable no-alert, no-console */

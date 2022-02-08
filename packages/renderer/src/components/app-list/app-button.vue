@@ -1,12 +1,15 @@
 <template>
-  <div class="app-button" :class="{
-    'appButton-isHome': isHome
-  }">
+  <div 
+    class="app-button" 
+    :class="{
+      'appButton-isHome': isHome
+    }"
+  >
     <img
       v-if="isHome"
       src="https://cdn.discordapp.com/emojis/933545685683433552.webp?size=96&quality=lossless"
       alt="alt"
-    />
+    >
   </div>
 </template>
 
@@ -16,7 +19,7 @@ export default {
     selected: Boolean,
     isHome: Boolean,
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

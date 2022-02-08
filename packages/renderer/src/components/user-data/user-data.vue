@@ -11,8 +11,8 @@
 export default {
   props: {
     serverName: String,
-  }
-}
+  },
+};
 </script>
 
 <style scoped>

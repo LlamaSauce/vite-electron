@@ -1,9 +1,8 @@
-
 <template>
   <!-- layout  -->
   <div id="grid">
     <AppList />
-    <UserData userName="Teeheero" />
+    <UserData user-name="Teeheero" />
     <AppNav />
     <AppData />
   </div>

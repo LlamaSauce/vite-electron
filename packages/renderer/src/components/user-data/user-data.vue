@@ -1,16 +1,11 @@
 <template>
   <div class="container">
-    <div class="title">
-      {{ userName }}
-    </div>
+    <div class="title">Teeheero</div>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    userName: String,
-  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <AppButton isHome />
-    <div class="separator" />
+    <div class="separator"></div>
     <AppButton />
     <AppButton />
   </div>

@@ -2,7 +2,7 @@
   <!-- layout  -->
   <div id="grid">
     <AppList />
-    <UserData user-name="Teeheero" />
+    <UserData />
     <AppNav />
     <AppData />
   </div>

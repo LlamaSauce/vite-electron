@@ -38,7 +38,7 @@ const config = {
     }),
     Icons({
       // expiremental
-      autoInstall: true
+      autoInstall: true,
     }),
     Components({
       // allow auto load markdown components under `./src/components/`

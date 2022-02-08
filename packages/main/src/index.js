@@ -1,6 +1,6 @@
-import {app, BrowserWindow, shell} from 'electron';
-import {join} from 'path';
-import {URL} from 'url';
+import { app, BrowserWindow, shell } from 'electron';
+import { join } from 'path';
+import { URL } from 'url';
 
 
 const isSingleInstance = app.requestSingleInstanceLock();
@@ -17,7 +17,7 @@ app.disableHardwareAcceleration();
 if (isDevelopment) {
   app.whenReady()
     .then(() => import('electron-devtools-installer'))
-    .then(({default: installExtension, VUEJS3_DEVTOOLS}) => installExtension(VUEJS3_DEVTOOLS, {
+    .then(({ default: installExtension, VUEJS3_DEVTOOLS }) => installExtension(VUEJS3_DEVTOOLS, {
       loadExtensionOptions: {
         allowFileAccess: true,
       },
@@ -30,6 +30,8 @@ let mainWindow = null;
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
     show: false, // Use 'ready-to-show' event to show window
+    width: 1000,
+    height: 800,
     webPreferences: {
       nativeWindowOpen: true,
       preload: join(__dirname, '../../preload/dist/index.cjs'),
@@ -63,7 +65,7 @@ const createWindow = async () => {
   await mainWindow.loadURL(pageUrl);
 };
 
- app.on('web-contents-created', (_event, contents) => {
+app.on('web-contents-created', (_event, contents) => {
 
   /**
    * Block navigation to origins not on the allowlist.
@@ -78,7 +80,7 @@ const createWindow = async () => {
       new Set(); // Do not use insecure protocols like HTTP. https://www.electronjs.org/docs/latest/tutorial/security#1-only-load-secure-content
     const { origin, hostname } = new URL(url);
     const isDevLocalhost = isDevelopment && hostname === 'localhost'; // permit live reload of index.html
-    if (!allowedOrigins.has(origin) && !isDevLocalhost){
+    if (!allowedOrigins.has(origin) && !isDevLocalhost) {
       console.warn('Blocked navigating to an unallowed origin:', origin);
       event.preventDefault();
     }
@@ -97,11 +99,11 @@ const createWindow = async () => {
   contents.setWindowOpenHandler(({ url }) => {
     const allowedOrigins =
       new Set([ // Do not use insecure protocols like HTTP. https://www.electronjs.org/docs/latest/tutorial/security#1-only-load-secure-content
-      'https://vitejs.dev',
-      'https://github.com',
-      'https://v3.vuejs.org']);
+        'https://vitejs.dev',
+        'https://github.com',
+        'https://v3.vuejs.org']);
     const { origin } = new URL(url);
-    if (allowedOrigins.has(origin)){
+    if (allowedOrigins.has(origin)) {
       shell.openExternal(url);
     } else {
       console.warn('Blocked the opening of an unallowed origin:', origin);
@@ -137,7 +139,7 @@ if (import.meta.env.PROD) {
   app.whenReady()
     .then(console.log('checking for update'))
     .then(() => import('electron-updater'))
-    .then(({autoUpdater}) => autoUpdater.checkForUpdatesAndNotify())
+    .then(({ autoUpdater }) => autoUpdater.checkForUpdatesAndNotify())
     .catch((e) => console.error('Failed check updates:', e));
 }
 

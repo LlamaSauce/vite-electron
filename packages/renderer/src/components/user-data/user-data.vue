@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="title">{{ userName }}</div>
+    <div class="title">
+      {{ userName }}
+    </div>
   </div>
 </template>
 

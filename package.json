@@ -30,14 +30,20 @@
     "eslint": "8.3.0",
     "eslint-plugin-vue": "8.1.1",
     "playwright": "1.16.3",
+    "unplugin-auto-import": "^0.5.11",
+    "unplugin-icons": "^0.13.1",
+    "unplugin-vue-components": "^0.17.18",
     "vite": "2.6.14",
+    "vite-plugin-pages": "^0.20.2",
+    "vite-plugin-vue-layouts": "^0.6.0",
     "vite-plugin-windicss": "^1.7.0",
     "windicss": "^3.4.3"
   },
   "dependencies": {
     "daisyui": "^1.25.4",
     "electron-updater": "4.6.2",
+    "sass": "^1.49.7",
     "vue": "3.2.22",
-    "vue-router": "4.0.12"
+    "vue-router": "^4.0.12"
   }
 }

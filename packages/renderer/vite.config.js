@@ -34,7 +34,7 @@ const config = {
         'vue',
         'vue-router',
       ],
-      dts: 'src/auto-imports.d.ts',
+      dts: true,
     }),
     Icons({
       // expiremental
@@ -57,7 +57,7 @@ const config = {
         }),
       ],
 
-      dts: 'src/components.d.ts',
+      dts: true,
     }),
   ],
   base: '',

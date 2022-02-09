@@ -40,25 +40,6 @@ const config = {
       // expiremental
       autoInstall: true,
     }),
-    Components({
-      // allow auto load markdown components under `./src/components/`
-      extensions: ['vue'],
-
-      // allow auto import and register components used in markdown
-      include: [/\.vue$/, /\.vue\?vue/],
-
-      // custom resolvers
-      resolvers: [
-        // auto import icons
-        // https://github.com/antfu/unplugin-icons
-        IconsResolver({
-          componentPrefix: '',
-          // enabledCollections: ['carbon']
-        }),
-      ],
-
-      dts: true,
-    }),
   ],
   base: '',
   server: {

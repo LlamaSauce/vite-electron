@@ -8,6 +8,13 @@
 </template>
 
 <script>
+import AppButton from './app-button.vue'
+
+export default {
+  components: {
+    AppButton
+  }
+}
 </script>
 
 <style lang="scss" scoped>

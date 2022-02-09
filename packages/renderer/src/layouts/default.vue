@@ -9,6 +9,19 @@
 </template>
 
 <script>
+import AppList from '../components/app-list/app-list.vue'
+import UserData from '../components/user-data/user-data.vue'
+import AppNav from '../components/app-nav/app-nav.vue'
+import AppData from '../components/app-data/app-data.vue'
+export default {
+  components: {
+    AppList,
+    UserData,
+    AppNav,
+    AppData
+  }
+}
+
 </script>
 
 <style scoped>

@@ -7,7 +7,6 @@ import vue from '@vitejs/plugin-vue';
 import WindiCSS from 'vite-plugin-windicss';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
-import Icons from 'unplugin-icons/vite';
 
 const PACKAGE_ROOT = __dirname;
 
@@ -26,10 +25,6 @@ const config = {
       extensions: ['vue'],
     }),
     Layouts(),
-    Icons({
-      // expiremental
-      autoInstall: true,
-    }),
   ],
   base: '',
   server: {

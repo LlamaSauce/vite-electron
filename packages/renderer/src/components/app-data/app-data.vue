@@ -1,6 +1,10 @@
 <template>
-  <img
-    src="https://cdn.discordapp.com/emojis/933545685683433552.webp?size=96&quality=lossless"
-    alt="alt"
-  />
+  <div>
+    <button class="btn">neutral</button>
+    <button class="btn btn-primary">primary</button>
+    <button class="btn btn-secondary">secondary</button>
+    <button class="btn btn-accent">accent</button>
+    <button class="btn btn-ghost">ghost</button>
+    <button class="btn btn-link">link</button>
+  </div>
 </template>

@@ -5,7 +5,6 @@ import typography from 'windicss/plugin/typography';
 const { transform } = require('windicss/helpers');
 
 export default defineConfig({
-  darkMode: 'class',
   // https://windicss.org/posts/v30.html#attributify-mode
   attributify: true,
 
@@ -13,4 +12,12 @@ export default defineConfig({
     typography(),
     transform('daisyui'),
   ],
+  daisyui: {
+    themes: [
+      'dark', // first one will be the default theme
+      'emerald',
+      'forest',
+      'synthwave'
+    ],
+  },
 });
